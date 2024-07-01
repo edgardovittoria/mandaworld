@@ -2,9 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
 .mandaFont {
     font-family: var(--font-manda);
 }
 .interFont{
     font-family: var(--font-inter);
 }
+
+/* .hero{
+    background-image: url('../../public/hero-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.welcomeContainer{
+    background-image: url('../../public/about_animation.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100;
+}
+
+
+.welcome{
+    background-image: url('../../public/waves-pad.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@keyframes clouds {
+    0%{
+        transform: translate3d(0, 0px, 0px);
+    }
+    100%{
+        transform: translate3d(-1557px, 0px, 0px);
+    }
+}
+
+.footerAnimation{
+    animation: clouds 25s linear infinite;
+}
+
+.footer::before{
+    background: #000;
+    zoom: 1;
+    -webkit-opacity: 0.25;
+    -moz-opacity: 0.25;
+    opacity: 0.25;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar::before{
+    background: #03051A;
+    zoom: 1;
+    -webkit-opacity: 0.25;
+    -moz-opacity: 0.25;
+    opacity: 0.55;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+}
+
+/* @keyframes mymove {
+    10% {box-shadow: 10px 10px 30px #6DFDFF;}
+    20% {box-shadow: -10px 10px 30px #6DFDFF;}
+    30% {box-shadow: 10px 10px 30px #6DFDFF;}
+    40% {box-shadow: -10px 10px 30px #6DFDFF;}
+    50% {box-shadow: 10px 10px 30px #6DFDFF;}
+    60% {box-shadow: -10px 10px 30px #6DFDFF;}
+    70% {box-shadow: 10px 10px 30px #6DFDFF;}
+    80% {box-shadow: -10px 10px 30px #6DFDFF;}
+    90% {box-shadow: 10px 10px 30px #6DFDFF;}
+    100% {box-shadow: -10px 10px 30px #6DFDFF;}
+}
+
+.boxContatti{
+    animation: mymove 10s infinite;
+} */

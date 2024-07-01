@@ -16,6 +16,7 @@ const config: Config = {
       colors: {
         primary: '#D10459',
         secondary: '#6DFDFF',
+        backgroundColor: '#03051A'
       },
       // fontFamily: {
       //   manda: ['var(--font-manda)'],

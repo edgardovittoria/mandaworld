@@ -1,6 +1,6 @@
 export default function Hero() {
     return (
-        <div className="w-full h-[65vh] flex flex-row justify-center items-center">
+        <div id="home" className="w-full h-[83vh] flex flex-row justify-center items-center hero">
             <div className="flex flex-col items-center gap-5 text-center w-1/2">
                 <span className="uppercase text-secondary font-bold text-2xl mandaFont">Palena</span>
                 <div className="flex flex-col leading-[.8]">
