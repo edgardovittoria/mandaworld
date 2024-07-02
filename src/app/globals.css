@@ -9,6 +9,9 @@ html {
 .mandaFont {
     font-family: var(--font-manda);
 }
+.moltorsFont {
+    font-family: var(--font-moltors);
+}
 .interFont{
     font-family: var(--font-inter);
 }

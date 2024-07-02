@@ -14,8 +14,8 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        primary: '#D10459',
-        secondary: '#6DFDFF',
+        primary: '#DA0A57',
+        secondary: '#78E7FB',
         backgroundColor: '#03051A'
       },
       // fontFamily: {
@@ -24,6 +24,8 @@ const config: Config = {
       // }
     },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
 };
 export default config;

@@ -1,9 +1,10 @@
 'use client'
 import Image from "next/image";
-import { FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaTiktok, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { FaThreads } from "react-icons/fa6";
 import { IoIosCall, IoIosPin } from "react-icons/io";
 import { TiSocialFacebook, TiSocialInstagram } from "react-icons/ti";
+import logo from '../../../public/logomanda.png'
 
 export default function Footer() {
 const isBrowser = () => typeof window !== 'undefined'; //The approach recommended by Next.js
@@ -23,10 +24,7 @@ const isBrowser = () => typeof window !== 'undefined'; //The approach recommende
         className="absolute top-0 left-0 footerAnimation z-10 max-w-[4645px] max-h-[355px] opacity-30"
       />
       <div className="px-96 flex flex-row gap-10 justify-evenly items-center relative z-50 pt-[80px] pb-[85px]">
-        <div className="flex flex-row items-center gap-8 w-1/4">
-          <Image src="/logo.png" alt="alt" width={100} height={100} />
-          <Image src="/mandaworld.png" alt="alt" width={100} height={100} />
-        </div>
+        <Image src={logo} alt="alt" className="w-1/5"/>
         <span className="text-secondary w-1/4">
           Praesent vel lectus eget turpis aliquam commodo. Aenean pharetra
           lobortis enim at aliquet. Nam sit amet molestie urna, at luctus lorem.
@@ -54,7 +52,7 @@ const isBrowser = () => typeof window !== 'undefined'; //The approach recommende
                 <FaInstagram className="text-blue-950" size={30}/>
             </div>
             <div className="p-2 bg-secondary">
-                <FaThreads className="text-blue-950" size={30}/>
+                <FaTiktok className="text-blue-950" size={30}/>
             </div>
             <div className="p-2 bg-secondary">
                 <FaYoutube className="text-blue-950" size={30}/>

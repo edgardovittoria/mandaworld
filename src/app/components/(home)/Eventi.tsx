@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Carousel from "../(ui)/Carousel";
 
 export default function Eventi() {
   return (
@@ -6,19 +7,16 @@ export default function Eventi() {
       <div className="h-[80vh] flex flex-col  items-center gap-8">
         <div className="flex flex-col items-center gap-5 text-center w-3/4">
           <div className="flex flex-col leading-[.8] items-center">
-            <span className="uppercase text-primary font-bold text-base mandaFont mb-2">
+          <span className="uppercase text-backgroundColor font-bold text-base mandaFont mb-2">
               Manda world
             </span>
             <h1 className="uppercase text-white font-bold text-[100px] mandaFont">
               Eventi
             </h1>
-            <Image src="/line.png" alt="alt" width={120} height={120} />
+            <Image src="/line-white.png" alt="alt" width={120} height={120} />
           </div>
-          <p className="text-white text-xl font-thin">
-            Scopri i nostri spazi e lasciati trasportare dell'atmosfera di
-            divertimento che si respira nel mondo MANDA.
-          </p>
         </div>
+        <Carousel/>
       </div>
     </div>
   );

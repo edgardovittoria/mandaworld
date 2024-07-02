@@ -6,7 +6,9 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 export const myFont = localFont({src: './font/manda.woff2', variable: '--font-manda'})
+export const moltors = localFont({src: './font/moltors.ttf', variable: '--font-moltors'})
 export const inter = Inter({subsets: ["latin"], variable: '--font-inter'})
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${myFont.variable} ${inter.variable} bg-[#03051A]`}>
+      <body className={`${myFont.variable} ${inter.variable} ${moltors.variable} bg-[#03051A]`}>
         <Navbar/>
         {children}
         <Footer/>
