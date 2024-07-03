@@ -25,30 +25,30 @@ export default function Contatti() {
         <div className="grid grid-cols-4 gap-[200px] mt-20">
           <div className="flex flex-col gap-4 items-center">
             <span className="text-secondary text-xl">WhatsApp</span>
-            <div className="p-10 border-[2px] border-secondary text-secondary rounded-xl hover:bg-secondary hover:text-backgroundColor hover:cursor-pointer shadow-secondary shadow-2xl">
+            <div className="p-10 border-[2px] border-secondary text-secondary rounded-full hover:bg-secondary hover:text-backgroundColor hover:cursor-pointer shadow-secondary shadow-2xl">
               <FaWhatsapp size={80} />
             </div>
           </div>
           <div className="flex flex-col gap-4 items-center">
             <span className="text-secondary text-xl">Instagram</span>
-            <div className="p-10 border-[2px] border-secondary text-secondary rounded-xl hover:bg-secondary hover:text-backgroundColor hover:cursor-pointer shadow-secondary shadow-2xl">
+            <div className="p-10 border-[2px] border-secondary text-secondary rounded-full hover:bg-secondary hover:text-backgroundColor hover:cursor-pointer shadow-secondary shadow-2xl">
               <FaInstagram size={80} />
             </div>
           </div>
           <div className="flex flex-col gap-4 items-center">
             <span className="text-secondary text-xl">Messenger</span>
-            <div className="p-10 border-[2px] border-secondary text-secondary rounded-xl hover:bg-secondary hover:text-backgroundColor hover:cursor-pointer shadow-secondary shadow-2xl">
+            <div className="p-10 border-[2px] border-secondary text-secondary rounded-full hover:bg-secondary hover:text-backgroundColor hover:cursor-pointer shadow-secondary shadow-2xl">
               <FaFacebookMessenger size={80} />
             </div>
           </div>
           <div className="flex flex-col gap-4 items-center">
             <span className="text-secondary text-xl">Telegram</span>
-            <div className="p-10 border-[2px] border-secondary text-secondary rounded-xl hover:bg-secondary hover:text-backgroundColor hover:cursor-pointer shadow-secondary shadow-2xl">
+            <div className="p-10 border-[2px] border-secondary text-secondary rounded-full hover:bg-secondary hover:text-backgroundColor hover:cursor-pointer shadow-secondary shadow-2xl">
               <FaTelegram size={80} />
             </div>
           </div>
         </div>
-        <button className="rounded-xl flex items-center justify-center flex-row gap-4 px-2 w-1/3 py-3 border-[2px] border-secondary text-secondary text-2xl mt-20 hover:bg-secondary hover:text-backgroundColor hover:cursor-pointer shadow-secondary shadow-lg">
+        <button className="rounded-full flex items-center justify-center flex-row gap-4 px-2 w-1/3 py-3 border-[2px] border-secondary text-secondary text-2xl mt-20 hover:bg-secondary hover:text-backgroundColor hover:cursor-pointer shadow-secondary shadow-lg">
           <IoIosCall size={30} />
           <span>CHIAMA</span>
         </button>

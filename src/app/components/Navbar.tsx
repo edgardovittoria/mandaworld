@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <div className="inline-flex px-24 flex-row justify-between items-center w-full py-4 fixed top-0 navbar z-50">
       <div className="flex flex-row items-center gap-8 relative z-50">
-        <Image src={logoscrittamanda} alt="alt" className="w-1/3"/>
+        <Image src={logoscrittamanda} alt="alt" className="w-1/4"/>
         {/* <Image src="/mandaworld.png" alt="alt" width={100} height={100} /> */}
       </div>
       <div className="flex flex-row items-center gap-10 relative z-50">
@@ -28,6 +28,22 @@ export default function Navbar() {
             {selectedItem === "Home" && (
               <Image src="/disco.gif" alt="alt" width={50} height={50} />
             )}
+          </div>
+        </Link>
+        <Link
+          href="/#eventi"
+          className="flex flex-col items-center hover:cursor-pointer hover:opacity-60"
+          onClick={() => {
+            setSelectedItem("Eventi");
+          }}
+        >
+            <div className="h-[30px] flex flex-col items-center">
+          <span className="uppercase text-white text-2xl mandaFont">
+            Eventi
+          </span>
+          {selectedItem === "Eventi" && (
+            <Image src="/disco.gif" alt="alt" width={50} height={50} />
+          )}
           </div>
         </Link>
         <Link
@@ -60,22 +76,6 @@ export default function Navbar() {
             {selectedItem === "Disco" && (
               <Image src="/disco.gif" alt="alt" width={50} height={50} />
             )}
-          </div>
-        </Link>
-        <Link
-          href="/#eventi"
-          className="flex flex-col items-center hover:cursor-pointer hover:opacity-60"
-          onClick={() => {
-            setSelectedItem("Eventi");
-          }}
-        >
-            <div className="h-[30px] flex flex-col items-center">
-          <span className="uppercase text-white text-2xl mandaFont">
-            Eventi
-          </span>
-          {selectedItem === "Eventi" && (
-            <Image src="/disco.gif" alt="alt" width={50} height={50} />
-          )}
           </div>
         </Link>
         <Link

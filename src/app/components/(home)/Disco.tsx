@@ -1,24 +1,39 @@
 import Image from "next/image";
+import wawesPad from "../../../../public/waves-pad.png"
+
 
 export default function Disco() {
   return (
-    <div id="disco" className="w-full py-20">
-      <div className="h-[80vh] flex flex-col  items-center gap-8">
+    <div className="welcomeContainer w-full py-20 relative" id="disco">
+      <div className="flex flex-col items-center">
         <div className="flex flex-col items-center gap-5 text-center w-3/4">
           <div className="flex flex-col leading-[.8] items-center">
-            <span className="uppercase text-primary font-bold text-base mandaFont mb-2">
-              Manda world
-            </span>
-            <h1 className="uppercase text-white font-bold text-[100px] mandaFont">
-              Disco
-            </h1>
-            <Image src="/line.png" alt="alt" width={120} height={120} />
+            <div className="flex flex-col gap-0 items-center mb-20">
+              <span className="uppercase text-secondary font-bold text-base mandaFont mb-2">
+                Manda world
+              </span>
+              <h1 className="uppercase text-white font-bold text-[100px] mandaFont">
+                DISCO
+              </h1>
+              <Image src="/line-white.png" alt="alt" width={120} height={120} />
+            </div>
+            <div className="relative">
+              <Image
+                src="/blog6.jpg"
+                alt="alt"
+                width={900}
+                height={600}
+                className="rounded-3xl border-2 border-[#AC094B] relative z-20 boxShadowAnimation"
+              />
+              <div className="absolute z-20 bg-black opacity-50 w-[900px] h-[600px] top-0 right-1/2 translate-x-1/2 rounded-3xl border-2 border-[#AC094B] flex flex-row justify-center items-center boxShadowAnimation" />
+              <h1 className="absolute top-1/3 right-1/2 translate-x-1/2 z-50 w-full uppercase text-white font-bold text-[100px] mandaFont">
+                coming soon...
+              </h1>
+              <span className="absolute top-1/2 right-1/2 translate-x-1/2 loading loading-spinner w-[150px] z-50 text-white"></span>
+            </div>
           </div>
-          <p className="text-white text-xl font-thin">
-            Scopri i nostri spazi e lasciati trasportare dell'atmosfera di
-            divertimento che si respira nel mondo MANDA.
-          </p>
         </div>
+        <Image src={wawesPad} alt="alt" className="absolute top-1/2"/>
       </div>
     </div>
   );

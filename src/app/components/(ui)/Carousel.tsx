@@ -7,36 +7,60 @@ import evento4 from '../../../../public/evento4.jpg'
 export default function Carousel() {
     return (
     <div className="grid grid-cols-4 gap-10 pt-20">
-        <div className="shadow-backgroundColor shadow-2xl rounded-2xl relative">
-            <Image src={evento1} alt="alt" className='rounded-2xl shadow-backgroundColor shadow-2xl'/>
-            <div className="rounded-2xl shadow-backgroundColor shadow-2xl w-full h-full absolute top-0 bg-backgroundColor opacity-30"/>
-            <div className="rounded-2xl shadow-backgroundColor shadow-2xl w-full h-full absolute top-0 flex flex-col gap-0 leading-[70px] items-center justify-center">
-                <span className='text-white z-50 mandaFont text-[100px]'>06</span>
-                <span className='text-white z-50 mandaFont text-[100px]'>AGO</span>
+        <div className="border border-pink-300 rounded-2xl relative">
+            <Image src={evento1} alt="alt" className='rounded-2xl shadow-pink-300 border border-pink-300 shadow-2xl'/>
+            <div className="rounded-2xl border border-pink-300 w-full h-full absolute top-0 bg-backgroundColor opacity-40"/>
+            <div className="rounded-2xl border border-pink-300 w-full h-full absolute top-0 flex flex-col gap-10 items-center justify-center">
+                <div className="flex flex-col justify-center items-center leading-[70px]">
+                    <span className='text-white z-50 mandaFont uppercase text-[100px]'>10</span>
+                    <span className='text-white z-50 mandaFont uppercase text-[100px]'>AGO</span>
+                </div>
+                <div className="flex flex-col justify-center items-center leading-7">
+                    <span className='text-white z-50 mandaFont uppercase text-[30px]'>Nome evento</span>
+                    <span className='text-white z-50 mandaFont uppercase text-[30px]'>Satrt: 17:00</span>
+                </div>
             </div>
         </div>
-        <div className="shadow-backgroundColor shadow-2xl rounded-2xl relative">
-            <Image src={evento2} alt="alt" className='rounded-2xl shadow-backgroundColor shadow-2xl'/>
-            <div className="rounded-2xl shadow-backgroundColor shadow-2xl w-full h-full absolute top-0 bg-backgroundColor opacity-30"/>
-            <div className="rounded-2xl shadow-backgroundColor shadow-2xl w-full h-full absolute top-0 flex flex-col gap-0 leading-[70px] items-center justify-center">
-                <span className='text-white z-50 mandaFont text-[100px]'>10</span>
-                <span className='text-white z-50 mandaFont text-[100px]'>AGO</span>
+        <div className="shadow-pink-300 border border-pink-300 rounded-2xl relative">
+            <Image src={evento2} alt="alt" className='rounded-2xl  shadow-pink-300 border border-pink-300 shadow-2xl'/>
+            <div className="rounded-2xl border border-pink-300 w-full h-full absolute top-0 bg-backgroundColor opacity-40"/>
+            <div className="rounded-2xl border border-pink-300 w-full h-full absolute top-0 flex flex-col gap-10 items-center justify-center">
+                <div className="flex flex-col justify-center items-center leading-[70px]">
+                    <span className='text-white z-50 mandaFont uppercase text-[100px]'>12</span>
+                    <span className='text-white z-50 mandaFont uppercase text-[100px]'>AGO</span>
+                </div>
+                <div className="flex flex-col justify-center items-center leading-7">
+                    <span className='text-white z-50 mandaFont uppercase text-[30px]'>Nome evento</span>
+                    <span className='text-white z-50 mandaFont uppercase text-[30px]'>Satrt: 17:00</span>
+                </div>
             </div>
         </div>
-        <div className="shadow-backgroundColor shadow-2xl rounded-2xl relative">
-            <Image src={evento3} alt="alt" className='rounded-2xl shadow-backgroundColor shadow-2xl'/>
-            <div className="rounded-2xl shadow-backgroundColor shadow-2xl w-full h-full absolute top-0 bg-backgroundColor opacity-30"/>
-            <div className="rounded-2xl shadow-backgroundColor shadow-2xl w-full h-full absolute top-0 flex flex-col gap-0 leading-[70px] items-center justify-center">
-                <span className='text-white z-50 mandaFont text-[100px]'>15</span>
-                <span className='text-white z-50 mandaFont text-[100px]'>AGO</span>
+        <div className="shadow-pink-300 border border-pink-300 rounded-2xl relative">
+            <Image src={evento3} alt="alt" className='rounded-2xl shadow-pink-300 border border-pink-300 shadow-2xl'/>
+            <div className="rounded-2xl shadow-pink-300 border border-pink-300 w-full h-full absolute top-0 bg-backgroundColor opacity-40"/>
+            <div className="rounded-2xl shadow-pink-300 border border-pink-300 w-full h-full absolute top-0 flex flex-col gap-10 items-center justify-center">
+                <div className="flex flex-col justify-center items-center leading-[70px]">
+                    <span className='text-white z-50 mandaFont uppercase text-[100px]'>15</span>
+                    <span className='text-white z-50 mandaFont uppercase text-[100px]'>AGO</span>
+                </div>
+                <div className="flex flex-col justify-center items-center leading-7">
+                    <span className='text-white z-50 mandaFont uppercase text-[30px]'>Nome evento</span>
+                    <span className='text-white z-50 mandaFont uppercase text-[30px]'>Satrt: 22:00</span>
+                </div>
             </div>
         </div>
-        <div className="shadow-backgroundColor shadow-2xl rounded-2xl relative">
-            <Image src={evento4} alt="alt" className='rounded-2xl shadow-backgroundColor shadow-2xl'/>
-            <div className="rounded-2xl shadow-backgroundColor shadow-2xl w-full h-full absolute top-0 bg-backgroundColor opacity-30"/>
-            <div className="rounded-2xl shadow-backgroundColor shadow-2xl w-full h-full absolute top-0 flex flex-col gap-0 leading-[70px] items-center justify-center">
-                <span className='text-white z-50 mandaFont text-[100px]'>17</span>
-                <span className='text-white z-50 mandaFont text-[100px]'>AGO</span>
+        <div className="shadow-pink-300 border border-pink-300 rounded-2xl relative">
+            <Image src={evento4} alt="alt" className='rounded-2xl shadow-pink-300 border border-pink-300 shadow-2xl'/>
+            <div className="rounded-2xl border-pink-300 w-full h-full absolute top-0 bg-backgroundColor opacity-40"/>
+            <div className="rounded-2xl border-pink-300 w-full h-full absolute top-0 flex flex-col gap-10 items-center justify-center">
+                <div className="flex flex-col justify-center items-center leading-[70px]">
+                    <span className='text-white z-50 mandaFont uppercase text-[100px]'>20</span>
+                    <span className='text-white z-50 mandaFont uppercase text-[100px]'>AGO</span>
+                </div>
+                <div className="flex flex-col justify-center items-center leading-7">
+                    <span className='text-white z-50 mandaFont uppercase text-[30px]'>Nome evento</span>
+                    <span className='text-white z-50 mandaFont uppercase text-[30px]'>Satrt: 22:00</span>
+                </div>
             </div>
         </div>
     </div>

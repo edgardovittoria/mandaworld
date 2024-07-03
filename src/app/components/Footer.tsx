@@ -15,7 +15,7 @@ const isBrowser = () => typeof window !== 'undefined'; //The approach recommende
   }
 
   return (
-    <div className="footer relative overflow-x-hidden">
+    <div className="footer relative overflow-x-hidden flex flex-col">
       <Image
         src="/footer-bg-long-2-scaled.jpg"
         alt="alt"
@@ -23,7 +23,7 @@ const isBrowser = () => typeof window !== 'undefined'; //The approach recommende
         height={355}
         className="absolute top-0 left-0 footerAnimation z-10 max-w-[4645px] max-h-[355px] opacity-30"
       />
-      <div className="px-96 flex flex-row gap-10 justify-evenly items-center relative z-50 pt-[80px] pb-[85px]">
+      <div className="px-96 w-full flex flex-row gap-10 justify-evenly items-center relative z-50 pt-[10px]">
         <Image src={logo} alt="alt" className="w-1/5"/>
         <span className="text-secondary w-1/4">
           Praesent vel lectus eget turpis aliquam commodo. Aenean pharetra
@@ -59,7 +59,7 @@ const isBrowser = () => typeof window !== 'undefined'; //The approach recommende
             </div>
         </div>
       </div>
-      <div className="flex px-96 flex-row justify-between py-4 pb-10 relative z-50">
+      <div className="flex px-96 flex-row justify-between pb-10 relative z-50 w-full">
         <span className="text-white">Mandaworld © All Rights Reserved - {new Date().getFullYear()}</span>
         <div
           className="flex flex-col items-center hover:cursor-pointer hover:opacity-60"

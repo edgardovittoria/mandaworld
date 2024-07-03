@@ -27,7 +27,7 @@ html {
     background-image: url('../../public/about_animation.png');
     background-position: top;
     background-repeat: no-repeat;
-    background-size: 100;
+    background-size: cover;
 }
 
 
@@ -74,7 +74,7 @@ html {
     zoom: 1;
     -webkit-opacity: 0.25;
     -moz-opacity: 0.25;
-    opacity: 0.55;
+    opacity: 0;
     content: "";
     display: block;
     position: absolute;
@@ -87,19 +87,19 @@ html {
     height: 100%;
 }
 
-/* @keyframes mymove {
-    10% {box-shadow: 10px 10px 30px #6DFDFF;}
-    20% {box-shadow: -10px 10px 30px #6DFDFF;}
-    30% {box-shadow: 10px 10px 30px #6DFDFF;}
-    40% {box-shadow: -10px 10px 30px #6DFDFF;}
-    50% {box-shadow: 10px 10px 30px #6DFDFF;}
-    60% {box-shadow: -10px 10px 30px #6DFDFF;}
-    70% {box-shadow: 10px 10px 30px #6DFDFF;}
-    80% {box-shadow: -10px 10px 30px #6DFDFF;}
-    90% {box-shadow: 10px 10px 30px #6DFDFF;}
-    100% {box-shadow: -10px 10px 30px #6DFDFF;}
+@keyframes mymove {
+    10% {box-shadow: 20px 0px 150px #6DFDFF;}
+    20% {box-shadow: -20px 0px 150px #AC094B}
+    30% {box-shadow: 20px 0px 150px #6DFDFF;}
+    40% {box-shadow: -20px 0px 150px #AC094B}
+    50% {box-shadow: 20px 0px 150px #6DFDFF;}
+    60% {box-shadow: -20px 0px 150px #AC094B;}
+    70% {box-shadow: 20px 0px 150px #6DFDFF;}
+    80% {box-shadow: -20px 0px 150px #AC094B}
+    90% {box-shadow: 20px 0px 150px #6DFDFF;}
+    100% {box-shadow: -20px 0px 150px #AC094B}
 }
 
-.boxContatti{
-    animation: mymove 10s infinite;
-} */
+.boxShadowAnimation{
+    animation: mymove 25s infinite;
+}
