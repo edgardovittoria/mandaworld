@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <div className="inline-flex px-24 flex-row justify-between items-center w-full py-4 fixed top-0 navbar z-50">
       <div className="flex flex-row items-center gap-8 relative z-50">
-        <Image src={logoscrittamanda} alt="alt" className="w-1/4"/>
+        <Image src={logoscrittamanda} alt="alt" className="w-1/3"/>
         {/* <Image src="/mandaworld.png" alt="alt" width={100} height={100} /> */}
       </div>
       <div className="flex flex-row items-center gap-10 relative z-50">
