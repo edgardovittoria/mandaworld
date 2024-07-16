@@ -1,19 +1,19 @@
-"use client";
+'use client'
 
-import { useState } from "react";
-import Image from "next/image";
+import React from "react";
 import Link from "next/link";
-import logoscrittamanda from '../../../public/logoscrittamanda.png'
+import Image from "next/image";
 
-export default function Navbar() {
-  const [selectedItem, setSelectedItem] = useState<string>("Home");
+interface DesktopMenuProps{
+    selectedItem: string, 
+    setSelectedItem: (v:string) => void
+}
+
+export const DesktopMenu: React.FC<DesktopMenuProps> = ({selectedItem, setSelectedItem}) => {
+
   return (
-    <div className="inline-flex px-24 flex-row justify-between items-center w-full py-4 fixed top-0 navbar z-50">
-      <div className="flex flex-row items-center gap-8 relative z-50">
-        <Image src={logoscrittamanda} alt="alt" className="w-1/3"/>
-        {/* <Image src="/mandaworld.png" alt="alt" width={100} height={100} /> */}
-      </div>
-      <div className="flex flex-row items-center gap-10 relative z-50">
+    <>
+      <div className="hidden xl:flex xl:flex-row xl:items-center xl:gap-10 rxl:elative xl:z-50">
         <Link
           href="/#home"
           className="flex flex-col items-center hover:cursor-pointer hover:opacity-60"
@@ -37,13 +37,13 @@ export default function Navbar() {
             setSelectedItem("Eventi");
           }}
         >
-            <div className="h-[30px] flex flex-col items-center">
-          <span className="uppercase text-white text-2xl mandaFont">
-            Eventi
-          </span>
-          {selectedItem === "Eventi" && (
-            <Image src="/disco.gif" alt="alt" width={50} height={50} />
-          )}
+          <div className="h-[30px] flex flex-col items-center">
+            <span className="uppercase text-white text-2xl mandaFont">
+              Eventi
+            </span>
+            {selectedItem === "Eventi" && (
+              <Image src="/disco.gif" alt="alt" width={50} height={50} />
+            )}
           </div>
         </Link>
         <Link
@@ -85,16 +85,16 @@ export default function Navbar() {
             setSelectedItem("Contatti");
           }}
         >
-            <div className="h-[30px] flex flex-col items-center">
-          <span className="uppercase text-white text-2xl mandaFont">
-            Contatti
-          </span>
-          {selectedItem === "Contatti" && (
-            <Image src="/disco.gif" alt="alt" width={50} height={50} />
-          )}
+          <div className="h-[30px] flex flex-col items-center">
+            <span className="uppercase text-white text-2xl mandaFont">
+              Contatti
+            </span>
+            {selectedItem === "Contatti" && (
+              <Image src="/disco.gif" alt="alt" width={50} height={50} />
+            )}
           </div>
         </Link>
       </div>
-    </div>
+    </>
   );
 }

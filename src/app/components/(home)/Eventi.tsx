@@ -10,7 +10,7 @@ export default function Welcome() {
             <span className="uppercase text-secondary font-bold text-base mandaFont mb-2">
               Manda world
             </span>
-            <h1 className="uppercase text-white font-bold text-[100px] mandaFont">
+            <h1 className="uppercase text-white font-bold mandaFont">
               Eventi
             </h1>
             <Image src="/line-white.png" alt="alt" width={120} height={120} />

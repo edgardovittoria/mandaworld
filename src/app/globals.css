@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    h1 {
+      @apply xl:text-[100px] lg:text-[80px] sm:text-[60px] text-[50px];
+    }
+    h2{
+      @apply lg:text-[40px] md:text-[27px] text-[20px] font-light;
+    }
+    p, span, li, a{
+      @apply lg:text-[20px] text-[14px] font-light;
+    }
+    button{
+      @apply text-[14px]
+    }
+  
+  }
+
 html {
     scroll-behavior: smooth;
 }

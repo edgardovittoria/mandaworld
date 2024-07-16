@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import localFont from 'next/font/local'
-import Navbar from "./components/Navbar";
+import Navbar from "./components/(navbar)/Navbar";
 import Footer from "./components/Footer";
 
 export const myFont = localFont({src: './font/manda.woff2', variable: '--font-manda'})

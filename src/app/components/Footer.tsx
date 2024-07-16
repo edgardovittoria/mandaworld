@@ -23,28 +23,28 @@ const isBrowser = () => typeof window !== 'undefined'; //The approach recommende
         height={355}
         className="absolute top-0 left-0 footerAnimation z-10 max-w-[4645px] max-h-[355px] opacity-30"
       />
-      <div className="px-96 w-full flex flex-row gap-10 justify-evenly items-center relative z-50 pt-[10px]">
-        <Image src={logo} alt="alt" className="w-1/5"/>
-        <span className="text-secondary w-1/4">
+      <div className="xl:px-96  lg:px-10 w-full flex xl:flex-row flex-col gap-10 xl:justify-evenly items-center relative z-20 pt-[10px]">
+        <Image src={logo} alt="alt" className="xl:w-1/5 w-1/3"/>
+        <span className="text-secondary xl:w-1/4 w-1/2 text-base text-center">
           Praesent vel lectus eget turpis aliquam commodo. Aenean pharetra
           lobortis enim at aliquet. Nam sit amet molestie urna, at luctus lorem.
           Vestibulum at consectetur libero.
         </span>
-        <div className="flex flex-col gap-4 text-white w-1/4">
+        <div className="flex flex-col items-center gap-4 text-white xl:w-1/4 w-1/2">
             <div className="flex flex-row gap-2 items-center">
                 <IoIosCall size={25} className="text-primary"/>
-                <span>+39 3983930391</span>
+                <span className="md:text-base text-sm">+39 3983930391</span>
             </div>
             <div className="flex flex-row gap-2 items-center">
                 <FaWhatsapp size={25} className="text-primary"/>
-                <span>+39 3983930391</span>
+                <span className="md:text-base text-sm">+39 3983930391</span>
             </div>
             <div className="flex flex-row gap-2 items-center">
                 <IoIosPin size={25} className="text-primary"/>
-                <span>Rione Frentano, 4, 66017 Palena CH</span>
+                <span className="md:text-base text-sm">Rione Frentano 4 Palena</span>
             </div>
         </div>
-        <div className="flex flex-row gap-3 items-center w-1/4">
+        <div className="flex flex-row gap-3 justify-center items-center xl:w-1/4 w-1/2">
             <div className="p-2 bg-secondary">
                 <TiSocialFacebook className="text-blue-950" size={30}/>
             </div>
@@ -59,8 +59,8 @@ const isBrowser = () => typeof window !== 'undefined'; //The approach recommende
             </div>
         </div>
       </div>
-      <div className="flex px-96 flex-row justify-between pb-10 relative z-50 w-full">
-        <span className="text-white">Mandaworld © All Rights Reserved - {new Date().getFullYear()}</span>
+      <div className="flex xl:px-96 flex-row justify-between pb-10 relative z-20 w-full px-10 mb-20 xl:mb-0">
+        <span className="text-white text-sm">Mandaworld © All Rights Reserved - {new Date().getFullYear()}</span>
         <div
           className="flex flex-col items-center hover:cursor-pointer hover:opacity-60"
         >
