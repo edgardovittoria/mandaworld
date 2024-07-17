@@ -119,3 +119,7 @@ html {
 .boxShadowAnimation{
     animation: mymove 25s infinite;
 }
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: #78E7FB;
+}

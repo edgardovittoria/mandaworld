@@ -6,7 +6,7 @@ import evento4 from '../../../../public/evento4.jpg'
 
 export default function Carousel() {
     return (
-    <div className="grid xl:grid-cols-4 gap-10 pt-20">
+    <div className="hidden xl:grid xl:grid-cols-4 xl:gap-10 xl:pt-20">
         <div className="border border-pink-300 rounded-2xl relative">
             <Image src={evento1} alt="alt" className='rounded-2xl shadow-pink-300 border border-pink-300 shadow-2xl'/>
             <div className="rounded-2xl border border-pink-300 w-full h-full absolute top-0 bg-backgroundColor opacity-40"/>

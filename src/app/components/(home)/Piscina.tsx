@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import piscina from "../../../../public/piscina.jpg";
 import { FaUmbrellaBeach } from "react-icons/fa";
@@ -6,9 +6,11 @@ import { GiBed } from "react-icons/gi";
 import { useState } from "react";
 
 export default function Piscina() {
-
-  const [numOmbrelloni, setnumOmbrelloni] = useState<number | undefined>(undefined)
-  const [numLettini, setnumLettini] = useState<number | undefined>(undefined)
+  const [numOmbrelloni, setnumOmbrelloni] = useState<number | undefined>(
+    undefined
+  );
+  const [numLettini, setnumLettini] = useState<number | undefined>(undefined);
+  const [data, setData] = useState<string | undefined>(undefined);
 
   return (
     <div className="w-full py-20 relative" id="piscina">
@@ -81,28 +83,65 @@ export default function Piscina() {
         </div>
         <div className="flex flex-col md:flex-row gap-4 items-center justify-center w-1/2 mt-20">
           <label className="input focus-within:shadow-2xl md:w-1/4 w-full focus-within:shadow-secondary input-bordered bg-transparent border border-secondary flex items-center gap-2">
-            <input type="number" className="grow placeholder:text-secondary text-secondary" placeholder="Numero Ombrelloni" 
+            <input
+              type="number"
+              className="grow placeholder:text-secondary text-secondary"
+              placeholder="Numero Ombrelloni"
               min={1}
               max={20}
               defaultValue={numOmbrelloni}
               onChange={(e) => {
-                setnumOmbrelloni(parseInt(e.target.value))
+                setnumOmbrelloni(parseInt(e.target.value));
               }}
             />
-            <FaUmbrellaBeach className="text-secondary"/>
+            <FaUmbrellaBeach className="text-secondary" />
           </label>
           <label className="input focus-within:shadow-2xl md:w-1/4 w-full focus-within:shadow-secondary input-bordered bg-transparent border border-secondary flex items-center gap-2">
-            <input type="number" className="grow placeholder:text-secondary text-secondary" placeholder="Numero Lettini" 
+            <input
+              type="number"
+              className="grow placeholder:text-secondary text-secondary"
+              placeholder="Numero Lettini"
               min={1}
               max={40}
               defaultValue={numLettini}
               onChange={(e) => {
-                setnumLettini(parseInt(e.target.value))
+                setnumLettini(parseInt(e.target.value));
               }}
             />
-            <GiBed className="text-secondary" size={20}/>
+            <GiBed className="text-secondary" size={20} />
           </label>
-          <button className="rounded-xl flex items-center justify-center flex-row gap-4 px-2 md:w-1/4 w-full py-2 border-[1px] border-secondary text-secondary text-xl hover:bg-secondary hover:text-backgroundColor hover:cursor-pointer">
+          <label className="input focus-within:shadow-2xl md:w-1/4 w-full focus-within:shadow-secondary input-bordered bg-transparent border border-secondary flex items-center gap-2">
+            <input
+              type="date"
+              className="grow placeholder:text-secondary text-secondary"
+              placeholder="Numero Lettini"
+              defaultValue={data}
+              onChange={(e) => {
+                console.log(e.currentTarget.value);
+                setData(e.currentTarget.value);
+                //setnumLettini(parseInt(e.target.value))
+              }}
+            />
+            {/* <GiBed className="text-secondary" size={20}/> */}
+          </label>
+          <button
+            className="rounded-xl flex items-center justify-center flex-row gap-4 px-2 md:w-1/4 w-full py-2 border-[1px] border-secondary text-secondary text-xl hover:bg-secondary hover:text-backgroundColor hover:cursor-pointer"
+            onClick={() => {
+              if (data) {
+                let dataArray = data?.split("-");
+                let text = `Salve, è possibile prenotare *${numOmbrelloni}* ombrelloni e *${numLettini}* lettini per il giorno *${
+                  dataArray[2]}/${dataArray[1]}/${dataArray[0]}*?`;
+                if (navigator.userAgent.includes("WhatsApp")) {
+                  // WhatsApp is installed
+                  window.open(`whatsapp://send?phone=3206990184?text=${text}`);
+                } else {
+                  // WhatsApp is not installed, open WhatsApp Web
+                  //window.open('https://web.whatsapp.com/send?phone=3206990184', '_blank');
+                  window.open(`whatsapp://send?phone=3206990184&text=${text}`);
+                }
+              }
+            }}
+          >
             <span>Prenota</span>
           </button>
         </div>

@@ -13,7 +13,7 @@ export const DesktopMenu: React.FC<DesktopMenuProps> = ({selectedItem, setSelect
 
   return (
     <>
-      <div className="hidden xl:flex xl:flex-row xl:items-center xl:gap-10 rxl:elative xl:z-50">
+      <div className="hidden xl:flex xl:flex-row xl:items-center xl:gap-10 xl:relative xl:z-20">
         <Link
           href="/#home"
           className="flex flex-col items-center hover:cursor-pointer hover:opacity-60"
