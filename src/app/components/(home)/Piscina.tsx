@@ -133,11 +133,11 @@ export default function Piscina() {
                   dataArray[2]}/${dataArray[1]}/${dataArray[0]}*?`;
                 if (navigator.userAgent.includes("WhatsApp")) {
                   // WhatsApp is installed
-                  window.open(`whatsapp://send?phone=3206990184?text=${text}`);
+                  window.open(`whatsapp://send?phone=3283108595&text=${text}`);
                 } else {
                   // WhatsApp is not installed, open WhatsApp Web
-                  //window.open('https://web.whatsapp.com/send?phone=3206990184', '_blank');
-                  window.open(`whatsapp://send?phone=3206990184&text=${text}`);
+                  //window.open('https://web.whatsapp.com/send?phone=3283108595', '_blank');
+                  window.open(`whatsapp://send?phone=3283108595&text=${text}`);
                 }
               }
             }}
