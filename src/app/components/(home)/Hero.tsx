@@ -2,7 +2,7 @@ import Image from "next/image";
 import wawesPad from '../../../../public/waves-pad.png'
 export default function Hero() {
     return (
-        <div id="home" className="w-full h-[100vh] flex flex-row justify-center items-center hero relative">
+        <div id="home" className="w-full h-[70vh] flex flex-row justify-center items-center hero relative">
             <div className="flex flex-col items-center gap-5 text-center w-1/2 z-50">
                 <span className="uppercase text-secondary font-bold text-2xl mandaFont">Palena</span>
                 <div className="flex flex-col leading-[.8]">

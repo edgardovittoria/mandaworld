@@ -4,7 +4,7 @@ import wawesPad from "../../../../public/waves-pad.png"
 
 export default function Disco() {
   return (
-    <div className="welcomeContainer w-full py-20 relative" id="disco">
+    <div className="welcomeContainer w-full py-20 relative bg-gradient-to-b from-primary to-backgroundColor" id="disco">
       <div className="flex flex-col items-center">
         <div className="flex flex-col items-center gap-5 text-center w-3/4">
           <div className="flex flex-col leading-[.8] items-center">

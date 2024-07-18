@@ -43,7 +43,7 @@ html {
     background-image: url('../../public/about_animation.png');
     background-position: top;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 
 

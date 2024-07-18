@@ -13,12 +13,12 @@ export default function Piscina() {
   const [data, setData] = useState<string | undefined>(undefined);
 
   return (
-    <div className="w-full py-20 relative" id="piscina">
+    <div className="w-full py-20 relative bg-gradient-to-b from-primary to-backgroundColor" id="piscina">
       <div className="flex flex-col items-center">
         <div className="flex flex-col items-center gap-5 text-center w-3/4">
           <div className="flex flex-col leading-[.8] items-center">
-            <div className="flex flex-col gap-0 items-center mb-20">
-              <span className="uppercase text-secondary font-bold text-base mandaFont mb-2">
+            <div className="flex flex-col gap-0 items-center mb-10 lg:mb-20">
+              <span className="uppercase text-backgroundColor font-bold text-base mandaFont mb-2">
                 Manda world
               </span>
               <h1 className="uppercase text-white font-bold mandaFont">
@@ -125,7 +125,8 @@ export default function Piscina() {
             {/* <GiBed className="text-secondary" size={20}/> */}
           </label>
           <button
-            className="rounded-xl flex items-center justify-center flex-row gap-4 px-2 md:w-1/4 w-full py-2 border-[1px] border-secondary text-secondary text-xl hover:bg-secondary hover:text-backgroundColor hover:cursor-pointer"
+            className="rounded-xl disabled:opacity-40 flex items-center justify-center flex-row gap-4 px-2 md:w-1/4 w-full py-2 border-[1px] border-secondary text-secondary text-xl hover:bg-secondary hover:text-backgroundColor hover:cursor-pointer"
+            disabled={!numLettini || !numOmbrelloni || !data}
             onClick={() => {
               if (data) {
                 let dataArray = data?.split("-");
@@ -134,10 +135,16 @@ export default function Piscina() {
                 if (navigator.userAgent.includes("WhatsApp")) {
                   // WhatsApp is installed
                   window.open(`whatsapp://send?phone=+393283108595&text=${text}`);
+                  setData(undefined)
+                  setnumLettini(undefined)
+                  setnumOmbrelloni(undefined)
                 } else {
                   // WhatsApp is not installed, open WhatsApp Web
                   //window.open('https://web.whatsapp.com/send?phone=3283108595', '_blank');
-                  window.open(`whatsapp://send?phone=+393283108595&text=${text}`);
+                  window.open(`https://web.whatsapp.com/send?phone=+393283108595&text=${text}`);
+                  setData(undefined)
+                  setnumLettini(undefined)
+                  setnumOmbrelloni(undefined)
                 }
               }
             }}

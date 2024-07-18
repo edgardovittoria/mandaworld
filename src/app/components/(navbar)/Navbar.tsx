@@ -12,13 +12,16 @@ export default function Navbar() {
   const [selectedItem, setselectedItem] = useState<string>("Home")
 
   return (
-    <div className="inline-flex px-24 flex-row justify-between items-center w-full py-4 navbar z-50">
-      <div className="hidden xl:flex xl:flex-row xl:items-center xl:gap-8 xl:relative xl:z-50">
-        <Image src={logoscrittamanda} alt="alt" className="w-1/3"/>
-        {/* <Image src="/mandaworld.png" alt="alt" width={100} height={100} /> */}
+    <>
+      <div className="hidden xl:inline-flex xl:px-24 xl:flex-row xl:justify-between xl:items-center xl:w-full xl:py-4 xl:navbar xl:z-50">
+        <div className="hidden xl:flex xl:flex-row xl:items-center xl:gap-8 xl:relative xl:z-50">
+          <Image src={logoscrittamanda} alt="alt" className="w-1/3"/>
+          {/* <Image src="/mandaworld.png" alt="alt" width={100} height={100} /> */}
+        </div>
+        <DesktopMenu selectedItem={selectedItem} setSelectedItem={setselectedItem}/>
       </div>
-      <DesktopMenu selectedItem={selectedItem} setSelectedItem={setselectedItem}/>
       <MobileMenu selectedItem={selectedItem} setSelectedItem={setselectedItem}/>
-    </div>
+    </>
+    
   );
 }
