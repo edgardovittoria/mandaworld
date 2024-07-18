@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Carousel from "../(ui)/Carousel";
-import wawesPad from "../../../../public/waves-pad-dark.png"
+import wawesPad from "../../../../public/waves-pad.png"
 import CarouselMobile from "../(ui)/CarouselMobile";
 export default function Welcome() {
   return (
-    <div className="w-full pt-20 relative bg-gradient-to-t from-primary to-backgroundColor" id="eventi">
+    <div className="w-full pt-20 relative" id="eventi">
       <div className="flex flex-col justify-center items-center gap-8">
         <div className="flex flex-col items-center gap-5 text-center w-3/4">
           <div className="flex flex-col leading-[.8] items-center">

@@ -13,7 +13,7 @@ export default function Piscina() {
   const [data, setData] = useState<string | undefined>(undefined);
 
   return (
-    <div className="w-full py-20 relative bg-gradient-to-b from-primary to-backgroundColor" id="piscina">
+    <div className="w-full py-20 relative" id="piscina">
       <div className="flex flex-col items-center">
         <div className="flex flex-col items-center gap-5 text-center w-3/4">
           <div className="flex flex-col leading-[.8] items-center">
