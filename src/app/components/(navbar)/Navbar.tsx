@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import logoscrittamanda from '../../../../public/logoscrittamanda.png'
+import logoscrittamanda from '../../../../public/logo_esteso_no_BKG.png'
 import {DesktopMenu} from "./components/DesktopMenu";
 import { MobileMenu } from "./components/MobileMenu";
 

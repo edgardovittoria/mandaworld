@@ -1,68 +1,53 @@
-import Image from 'next/image'
-import evento1 from '../../../../public/evento1.jpg'
-import evento2 from '../../../../public/evento2.jpg'
-import evento3 from '../../../../public/evento3.jpg'
-import evento4 from '../../../../public/evento4.jpg'
+"use client";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { ImgEvento, ImgPiscina } from "@/app/model/model";
+import { fetchImagesEventi } from "@/data/immaginiEventi";
 
-export default function Carousel() {
-    return (
-    <div className="hidden xl:grid xl:grid-cols-4 xl:gap-10 xl:pt-20">
-        <div className="border border-pink-300 rounded-2xl relative">
-            <Image src={evento1} alt="alt" className='rounded-2xl shadow-pink-300 border border-pink-300 shadow-2xl'/>
-            <div className="rounded-2xl border border-pink-300 w-full h-full absolute top-0 bg-backgroundColor opacity-40"/>
-            <div className="rounded-2xl border border-pink-300 w-full h-full absolute top-0 flex flex-col gap-10 items-center justify-center">
-                <div className="flex flex-col justify-center items-center leading-[70px]">
-                    <span className='text-white z-20 mandaFont uppercase text-[100px]'>10</span>
-                    <span className='text-white z-20 mandaFont uppercase text-[100px]'>AGO</span>
-                </div>
-                <div className="flex flex-col justify-center items-center leading-7">
-                    <span className='text-white z-20 mandaFont uppercase text-[30px]'>Nome evento</span>
-                    <span className='text-white z-20 mandaFont uppercase text-[30px]'>Satrt: 17:00</span>
-                </div>
-            </div>
-        </div>
-        <div className="shadow-pink-300 border border-pink-300 rounded-2xl relative">
-            <Image src={evento2} alt="alt" className='rounded-2xl  shadow-pink-300 border border-pink-300 shadow-2xl'/>
-            <div className="rounded-2xl border border-pink-300 w-full h-full absolute top-0 bg-backgroundColor opacity-40"/>
-            <div className="rounded-2xl border border-pink-300 w-full h-full absolute top-0 flex flex-col gap-10 items-center justify-center">
-                <div className="flex flex-col justify-center items-center leading-[70px]">
-                    <span className='text-white z-20 mandaFont uppercase text-[100px]'>12</span>
-                    <span className='text-white z-20 mandaFont uppercase text-[100px]'>AGO</span>
-                </div>
-                <div className="flex flex-col justify-center items-center leading-7">
-                    <span className='text-white z-20 mandaFont uppercase text-[30px]'>Nome evento</span>
-                    <span className='text-white z-20 mandaFont uppercase text-[30px]'>Satrt: 17:00</span>
-                </div>
-            </div>
-        </div>
-        <div className="shadow-pink-300 border border-pink-300 rounded-2xl relative">
-            <Image src={evento3} alt="alt" className='rounded-2xl shadow-pink-300 border border-pink-300 shadow-2xl'/>
-            <div className="rounded-2xl shadow-pink-300 border border-pink-300 w-full h-full absolute top-0 bg-backgroundColor opacity-40"/>
-            <div className="rounded-2xl shadow-pink-300 border border-pink-300 w-full h-full absolute top-0 flex flex-col gap-10 items-center justify-center">
-                <div className="flex flex-col justify-center items-center leading-[70px]">
-                    <span className='text-white z-20 mandaFont uppercase text-[100px]'>15</span>
-                    <span className='text-white z-20 mandaFont uppercase text-[100px]'>AGO</span>
-                </div>
-                <div className="flex flex-col justify-center items-center leading-7">
-                    <span className='text-white z-20 mandaFont uppercase text-[30px]'>Nome evento</span>
-                    <span className='text-white z-20 mandaFont uppercase text-[30px]'>Satrt: 22:00</span>
-                </div>
-            </div>
-        </div>
-        <div className="shadow-pink-300 border border-pink-300 rounded-2xl relative">
-            <Image src={evento4} alt="alt" className='rounded-2xl shadow-pink-300 border border-pink-300 shadow-2xl'/>
-            <div className="rounded-2xl border-pink-300 w-full h-full absolute top-0 bg-backgroundColor opacity-40"/>
-            <div className="rounded-2xl border-pink-300 w-full h-full absolute top-0 flex flex-col gap-10 items-center justify-center">
-                <div className="flex flex-col justify-center items-center leading-[70px]">
-                    <span className='text-white z-20 mandaFont uppercase text-[100px]'>20</span>
-                    <span className='text-white z-20 mandaFont uppercase text-[100px]'>AGO</span>
-                </div>
-                <div className="flex flex-col justify-center items-center leading-7">
-                    <span className='text-white z-20 mandaFont uppercase text-[30px]'>Nome evento</span>
-                    <span className='text-white z-20 mandaFont uppercase text-[30px]'>Satrt: 22:00</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    )
+export interface CarouselProps {
+  images: ImgEvento[] | ImgPiscina[];
+  section: string;
 }
+
+const Carousel: React.FC<CarouselProps> = ({ images, section }) => {
+  return (
+    <div className="hidden xl:carousel xl:rounded-box xl:space-x-10 overflow-x-visible">
+      {images.map((img) => (
+        <div className="carousel-item" id={`slide${img.id%3}`}>
+          <div className="border rounded-2xl relative">
+            <Image
+              src={img.src}
+              alt={img.alt}
+              width={img.width}
+              height={img.height}
+              className="rounded-2xl border"
+            />
+            <div className="rounded-2xl border w-full h-full absolute top-0 bg-backgroundColor opacity-40" />
+            {section === "eventi" && (
+              <div className="rounded-2xl border w-full h-full absolute top-0 flex flex-col gap-10 items-center justify-center">
+                <div className="flex flex-col justify-center items-center leading-[70px]">
+                  <span className="text-white z-20 mandaFont uppercase text-[100px]">
+                    {(img as ImgEvento).giorno}
+                  </span>
+                  <span className="text-white z-20 mandaFont uppercase text-[100px]">
+                    {(img as ImgEvento).mese}
+                  </span>
+                </div>
+                <div className="flex flex-col justify-center items-center leading-7">
+                  <span className="text-white z-20 mandaFont uppercase text-[30px]">
+                    {(img as ImgEvento).nome}
+                  </span>
+                  <span className="text-white z-20 mandaFont uppercase text-[30px]">
+                    Satrt: {(img as ImgEvento).start}
+                  </span>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default Carousel;
