@@ -8,6 +8,10 @@ import Carousel from "../(ui)/Carousel";
 import { ImgPiscina } from "@/app/model/model";
 import { fetchImagesPiscina } from "@/data/immaginiPiscina";
 import CarouselMobile from "../(ui)/CarouselMobile";
+import { BsClockHistory } from "react-icons/bs";
+import { IoCalendarOutline } from "react-icons/io5";
+import { HiCurrencyEuro } from "react-icons/hi2";
+import { AiOutlineEuro } from "react-icons/ai";
 
 export default function Piscina() {
   const [numOmbrelloni, setnumOmbrelloni] = useState<number>(
@@ -39,10 +43,11 @@ export default function Piscina() {
             <Carousel images={images} section="piscina"/>
             <CarouselMobile images={images} section="piscina"/>
             <div className="relative flex xl:flex-row flex-col gap-10 justify-evenly xl:items-start w-full mt-20">
-              <div className="flex flex-col items-center">
-                <h2 className="uppercase text-white font-bold md:text-[60px] text-[40px] mandaFont">
+              <div className="relative flex w-full xl:w-1/5 flex-col items-center px-3 py-10  border rounded-lg border-secondary">
+                {/* <h2 className="uppercase text-white font-bold md:text-[60px] text-[40px] mandaFont">
                   ORARI
-                </h2>
+                </h2> */}
+                <BsClockHistory size={40} className="text-secondary absolute top-[-20px] bg-backgroundColor"/>
                 <span className="uppercase text-white font-bold md:text-[25px] text-[20px] mandaFont mt-3">
                   mattina: 9:00 - 13:00
                 </span>
@@ -50,10 +55,11 @@ export default function Piscina() {
                   pomeriggio: 13:00 - 18:00
                 </span>
               </div>
-              <div className="flex flex-col items-center">
-                <h2 className="uppercase text-white font-bold md:text-[60px] text-[40px] mandaFont">
+              <div className="relative flex w-full xl:w-1/5 flex-col items-center px-3 py-10  border rounded-lg border-secondary">
+                {/* <h2 className="uppercase text-white font-bold md:text-[60px] text-[40px] mandaFont">
                   STAGIONE
-                </h2>
+                </h2> */}
+                <IoCalendarOutline size={40} className="text-secondary absolute top-[-20px] bg-backgroundColor"/>
                 <span className="uppercase text-white font-bold md:text-[25px] text-[20px] mandaFont mt-3">
                   apertura: 25 luglio
                 </span>
@@ -61,10 +67,11 @@ export default function Piscina() {
                   chiusura: 30 settembre
                 </span>
               </div>
-              <div className="flex flex-col items-center">
-                <h2 className="uppercase text-white font-bold md:text-[60px] text-[40px] mandaFont">
+              <div className="relative flex w-full xl:w-1/5 flex-col items-center px-3 py-10  border rounded-lg border-secondary">
+                {/* <h2 className="uppercase text-white font-bold md:text-[60px] text-[40px] mandaFont">
                   COSTI
-                </h2>
+                </h2> */}
+                <AiOutlineEuro size={40} className="text-secondary absolute top-[-20px] bg-backgroundColor"/>
                 <span className="uppercase text-white font-bold md:text-[25px] text-[20px] mandaFont mt-2">
                   mezza giornata: 5€
                 </span>
@@ -72,10 +79,11 @@ export default function Piscina() {
                   Giornata intera: 8€
                 </span>
               </div>
-              <div className="flex flex-col items-center">
-                <h2 className="uppercase text-white font-bold md:text-[60px] text-[40px] mandaFont">
+              <div className="relative w-full xl:w-1/5 flex flex-col items-center px-3 py-10  border rounded-lg border-secondary">
+                {/* <h2 className="uppercase text-white font-bold md:text-[60px] text-[40px] mandaFont">
                   Disponibilità
-                </h2>
+                </h2> */}
+                <FaUmbrellaBeach size={40} className="text-secondary absolute top-[-20px] bg-backgroundColor"/>
                 <span className="uppercase text-white font-bold md:text-[25px] text-[20px] mandaFont mt-3">
                   ombrelloni: 20
                 </span>
