@@ -5,6 +5,7 @@ import { FaThreads } from "react-icons/fa6";
 import { IoIosCall, IoIosPin } from "react-icons/io";
 import { TiSocialFacebook, TiSocialInstagram } from "react-icons/ti";
 import logo from '../../../public/logomanda.png'
+import Link from "next/link";
 
 export default function Footer() {
 const isBrowser = () => typeof window !== 'undefined'; //The approach recommended by Next.js
@@ -33,30 +34,30 @@ const isBrowser = () => typeof window !== 'undefined'; //The approach recommende
         <div className="flex flex-col items-center gap-4 text-white xl:w-1/4 w-1/2">
             <div className="flex flex-row gap-2 items-center">
                 <IoIosCall size={25} className="text-primary"/>
-                <span className="md:text-base text-sm">+39 3983930391</span>
+                <Link href="tel:+393293306094" className="md:text-base text-sm">+39 3293306094</Link>
             </div>
             <div className="flex flex-row gap-2 items-center">
-                <FaWhatsapp size={25} className="text-primary"/>
-                <span className="md:text-base text-sm">+39 3983930391</span>
+                <IoIosCall size={25} className="text-primary"/>
+                <Link href="tel:+393293306094" className="md:text-base text-sm">+39 3283108595</Link>
             </div>
-            <div className="flex flex-row gap-2 items-center">
+            <Link href="https://maps.app.goo.gl/Tm4bBPiGBShiioFp9" className="flex flex-row gap-2 items-center">
                 <IoIosPin size={25} className="text-primary"/>
                 <span className="md:text-base text-sm">Rione Frentano 4 Palena</span>
-            </div>
+            </Link>
         </div>
         <div className="flex flex-row gap-3 justify-center items-center xl:w-1/4 w-1/2">
-            <div className="p-2 bg-secondary">
+            <Link href="https://www.facebook.com/people/Manda-Summer-Pool/61562635065987/" className="p-2 bg-secondary">
                 <TiSocialFacebook className="text-blue-950" size={30}/>
-            </div>
-            <div className="p-2 bg-secondary">
+            </Link>
+            <Link href="https://www.instagram.com/manda_summerpool/" className="p-2 bg-secondary">
                 <FaInstagram className="text-blue-950" size={30}/>
-            </div>
-            <div className="p-2 bg-secondary">
+            </Link>
+            {/* <div className="p-2 bg-secondary">
                 <FaTiktok className="text-blue-950" size={30}/>
             </div>
             <div className="p-2 bg-secondary">
                 <FaYoutube className="text-blue-950" size={30}/>
-            </div>
+            </div> */}
         </div>
       </div>
       <div className="flex xl:px-96 flex-row justify-between pb-10 relative z-20 w-full px-10 mb-20 xl:mb-0">

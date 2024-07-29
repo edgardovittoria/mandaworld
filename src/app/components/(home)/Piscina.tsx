@@ -12,6 +12,8 @@ import { BsClockHistory } from "react-icons/bs";
 import { IoCalendarOutline } from "react-icons/io5";
 import { HiCurrencyEuro } from "react-icons/hi2";
 import { AiOutlineEuro } from "react-icons/ai";
+import { FiInfo } from "react-icons/fi";
+import { CiCircleCheck } from "react-icons/ci";
 
 export default function Piscina() {
   const [numOmbrelloni, setnumOmbrelloni] = useState<number>(
@@ -42,29 +44,32 @@ export default function Piscina() {
             </div>
             <Carousel images={images} section="piscina"/>
             <CarouselMobile images={images} section="piscina"/>
-            <div className="relative flex xl:flex-row flex-col gap-10 justify-evenly xl:items-start w-full mt-20">
+            <div className="relative flex xl:flex-row flex-col gap-10 justify-evenly xl:items-center w-full mt-20">
               <div className="relative flex w-full xl:w-1/5 flex-col items-center px-3 py-10  border rounded-lg border-secondary">
                 {/* <h2 className="uppercase text-white font-bold md:text-[60px] text-[40px] mandaFont">
                   ORARI
                 </h2> */}
                 <BsClockHistory size={40} className="text-secondary absolute top-[-20px] bg-backgroundColor"/>
-                <span className="uppercase text-white font-bold md:text-[25px] text-[20px] mandaFont mt-3">
-                  mattina: 9:00 - 13:00
+                <span className="uppercase text-white font-bold text-[20px] mandaFont mt-3">
+                  Orari: 9:00 - 18:00
                 </span>
-                <span className="uppercase text-white font-bold md:text-[25px] text-[20px] mandaFont mt-2">
-                  pomeriggio: 13:00 - 18:00
+                <span className="uppercase text-white font-bold text-[20px] mandaFont mt-2">
+                  ingresso: 9:00 - 17:00
                 </span>
               </div>
               <div className="relative flex w-full xl:w-1/5 flex-col items-center px-3 py-10  border rounded-lg border-secondary">
                 {/* <h2 className="uppercase text-white font-bold md:text-[60px] text-[40px] mandaFont">
                   STAGIONE
                 </h2> */}
-                <IoCalendarOutline size={40} className="text-secondary absolute top-[-20px] bg-backgroundColor"/>
-                <span className="uppercase text-white font-bold md:text-[25px] text-[20px] mandaFont mt-3">
-                  apertura: 25 luglio
+                <CiCircleCheck size={40} className="text-secondary absolute top-[-20px] bg-backgroundColor"/>
+                <span className="uppercase text-white font-bold text-[20px] mandaFont mt-3">
+                  spogliatoio
                 </span>
-                <span className="uppercase text-white font-bold md:text-[25px] text-[20px] mandaFont mt-2">
-                  chiusura: 30 settembre
+                <span className="uppercase text-white font-bold text-[20px] mandaFont mt-2">
+                  doccia calda
+                </span>
+                <span className="uppercase text-white font-bold text-[20px] mandaFont mt-2">
+                  obbligo cuffia
                 </span>
               </div>
               <div className="relative flex w-full xl:w-1/5 flex-col items-center px-3 py-10  border rounded-lg border-secondary">
@@ -72,11 +77,20 @@ export default function Piscina() {
                   COSTI
                 </h2> */}
                 <AiOutlineEuro size={40} className="text-secondary absolute top-[-20px] bg-backgroundColor"/>
-                <span className="uppercase text-white font-bold md:text-[25px] text-[20px] mandaFont mt-2">
-                  mezza giornata: 5€
+                <span className="uppercase text-white font-bold text-[20px] mandaFont mt-2">
+                  ingresso: 5€
                 </span>
-                <span className="uppercase text-white font-bold md:text-[25px] text-[20px] mandaFont mt-2">
-                  Giornata intera: 8€
+                <span className="uppercase text-white font-bold text-[20px] mandaFont mt-2">
+                  bambini fino a 5 anni: gratis
+                </span>
+                <span className="uppercase text-white font-bold text-[20px] mandaFont mt-2">
+                  ombrellone + 2 lettini: 10€
+                </span>
+                <span className="uppercase text-white font-bold text-[20px] mandaFont mt-2">
+                  terzo lettino: 3€
+                </span>
+                <span className="uppercase text-white font-bold text-[20px] mandaFont mt-2">
+                  lettino imbottito (vip): 5€
                 </span>
               </div>
               <div className="relative w-full xl:w-1/5 flex flex-col items-center px-3 py-10  border rounded-lg border-secondary">
@@ -84,11 +98,14 @@ export default function Piscina() {
                   Disponibilità
                 </h2> */}
                 <FaUmbrellaBeach size={40} className="text-secondary absolute top-[-20px] bg-backgroundColor"/>
-                <span className="uppercase text-white font-bold md:text-[25px] text-[20px] mandaFont mt-3">
+                <span className="uppercase text-white font-bold text-[20px] mandaFont mt-3">
                   ombrelloni: 20
                 </span>
-                <span className="uppercase text-white font-bold md:text-[25px] text-[20px] mandaFont mt-2">
-                  lettini: 40
+                <span className="uppercase text-white font-bold text-[20px] mandaFont mt-2">
+                  lettini: 50
+                </span>
+                <span className="uppercase text-white font-bold text-[20px] mandaFont mt-2">
+                  lettini imbottiti (vip): 8
                 </span>
               </div>
             </div>
@@ -163,10 +180,10 @@ export default function Piscina() {
                 //   setnumLettini(undefined)
                 //   setnumOmbrelloni(undefined)
                 // }
-                window.open(`whatsapp://send?phone=+393283108595&text=${text}`);
-                  setData(undefined)
-                  setnumLettini(0)
-                  setnumOmbrelloni(0)
+                window.open(`whatsapp://send?phone=+393293306094&text=${text}`);
+                setData(undefined)
+                setnumLettini(0)
+                setnumOmbrelloni(0)
               }
             }}
           >
