@@ -39,7 +39,7 @@ export default function Contatti() {
               <FaInstagram className="lg:w-[60px] lg:h-[60px] w-[30px] h-[30px]" />
             </div>
           </Link>
-          <Link href="https://www.facebook.com/messages/t/391720900684752" className="flex flex-col gap-4 items-center">
+          <Link href="https://www.facebook.com/people/Manda-Summer-Pool/61562635065987/" className="flex flex-col gap-4 items-center">
             <span className="text-secondary lg:text-xl">Messenger</span>
             <div className="lg:p-10 p-5 border-[2px] border-secondary text-secondary rounded-full hover:bg-secondary hover:text-backgroundColor hover:cursor-pointer shadow-secondary shadow-lg">
               <FaFacebookMessenger className="lg:w-[60px] lg:h-[60px] w-[30px] h-[30px]" />
