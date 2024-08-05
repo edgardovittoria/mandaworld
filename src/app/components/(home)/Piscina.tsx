@@ -78,19 +78,22 @@ export default function Piscina() {
                 </h2> */}
                 <AiOutlineEuro size={40} className="text-secondary absolute top-[-20px] bg-backgroundColor"/>
                 <span className="uppercase text-white font-bold text-[20px] mandaFont mt-2">
-                  ingresso: 5€
-                </span>
-                <span className="uppercase text-white font-bold text-[20px] mandaFont mt-2">
                   bambini fino a 5 anni: gratis
                 </span>
                 <span className="uppercase text-white font-bold text-[20px] mandaFont mt-2">
-                  ombrellone + 2 lettini: 10€
+                  ingresso: 5€
                 </span>
                 <span className="uppercase text-white font-bold text-[20px] mandaFont mt-2">
-                  terzo lettino: 3€
+                  ombrellone + 1 lettino: 10€
                 </span>
                 <span className="uppercase text-white font-bold text-[20px] mandaFont mt-2">
-                  lettino imbottito (vip): 5€
+                  lettino aggiuntivo: 3€
+                </span>
+                <span className="uppercase text-white font-bold text-[20px] mandaFont mt-2">
+                  lettino solarium: 8€
+                </span>
+                <span className="uppercase text-white font-bold text-[20px] mandaFont mt-2">
+                  cuffie: 2,50€
                 </span>
               </div>
               <div className="relative w-full xl:w-1/5 flex flex-col items-center px-3 py-10  border rounded-lg border-secondary">

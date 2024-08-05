@@ -18,12 +18,12 @@ const CarouselMobile:React.FC<CarouselMobileProps> = ({images, section}) => {
         <Image
           src={img.src}
           alt={img.alt}
-          className="rounded-2xl  border"
+          className={`rounded-2xl border ${section === 'piscina' ? 'aspect-square' : 'aspect-auto'}`}
           width={img.width}
           height={img.height}
         />
-        <div className="rounded-2xl border w-full h-full absolute top-0 bg-backgroundColor opacity-40" />
-        {section === "eventi" &&
+        {/* <div className="rounded-2xl border w-full h-full absolute top-0 bg-backgroundColor opacity-40" /> */}
+        {/* {section === "eventi" &&
           <div className="rounded-2xl border w-full h-full absolute top-0 flex flex-col gap-10 items-center justify-center">
           <div className="flex flex-col justify-center items-center leading-[70px]">
             <span className="text-white z-20 mandaFont uppercase text-[80px]">
@@ -42,7 +42,7 @@ const CarouselMobile:React.FC<CarouselMobileProps> = ({images, section}) => {
             </span>
           </div>
         </div>
-        }
+        } */}
       </div>
       ))}
     </div>
