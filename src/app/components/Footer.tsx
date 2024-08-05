@@ -46,12 +46,12 @@ export default function Footer() {
             </Link>
           </div>
           <Link
-            href="https://maps.app.goo.gl/Tm4bBPiGBShiioFp9"
+            href="https://maps.app.goo.gl/bT3V6Dsscz12Hap59"
             className="flex flex-row gap-2 items-center"
           >
             <IoIosPin size={25} className="text-primary" />
             <span className="md:text-base text-sm">
-              Rione Frentano 4 Palena
+              Via Colle Salardo, Palena
             </span>
           </Link>
         </div>
