@@ -12,7 +12,7 @@ export interface CarouselProps {
 const Carousel: React.FC<CarouselProps> = ({ images, section }) => {
   console.log(section)
   return (
-    <div className="hidden xl:carousel xl:rounded-box xl:space-x-10 overflow-x-visible">
+    <div className="hidden xl:carousel xl:rounded-box xl:space-x-10 overflow-x-visible mt-10">
       {images.map((img) => (
         <div className="carousel-item" id={`slide${img.id%3}`}>
           <div className={`border rounded-2xl relative`}>
@@ -21,7 +21,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, section }) => {
               alt={img.alt}
               width={img.width}
               height={img.height}
-              className={`rounded-2xl border ${section === 'piscina' ? 'aspect-square' : 'aspect-auto'}`}
+              className={`rounded-2xl border ${section === 'piscina' ? 'aspect-square' : 'aspect-auto h-full'}`}
             />
             {/* <div className="rounded-2xl border w-full h-full absolute top-0 bg-backgroundColor opacity-40" /> */}
             {/* {section === "eventi" && (
