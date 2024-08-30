@@ -16,17 +16,15 @@ import { FiInfo } from "react-icons/fi";
 import { CiCircleCheck } from "react-icons/ci";
 
 export default function Piscina() {
-  const [numOmbrelloni, setnumOmbrelloni] = useState<number>(
-    0
-  );
+  const [numOmbrelloni, setnumOmbrelloni] = useState<number>(0);
   const [numLettini, setnumLettini] = useState<number>(0);
   const [data, setData] = useState<string | undefined>(undefined);
-  const [images, setImages] = useState<ImgPiscina[]>([])
-    useEffect(() => {
-        fetchImagesPiscina().then(res => {
-            setImages(res)
-        })
-    }, []);
+  const [images, setImages] = useState<ImgPiscina[]>([]);
+  useEffect(() => {
+    fetchImagesPiscina().then((res) => {
+      setImages(res);
+    });
+  }, []);
 
   return (
     <div className="w-full py-20 relative" id="piscina">
@@ -42,14 +40,17 @@ export default function Piscina() {
               </h1>
               <Image src="/line-white.png" alt="alt" width={120} height={120} />
             </div>
-            <Carousel images={images} section="piscina"/>
-            <CarouselMobile images={images} section="piscina"/>
+            <Carousel images={images} section="piscina" />
+            <CarouselMobile images={images} section="piscina" />
             <div className="relative flex xl:flex-row flex-col gap-10 justify-evenly xl:items-center w-full mt-20">
               <div className="relative flex w-full xl:w-1/5 flex-col items-center px-3 py-10  border rounded-lg border-secondary">
                 {/* <h2 className="uppercase text-white font-bold md:text-[60px] text-[40px] mandaFont">
                   ORARI
                 </h2> */}
-                <BsClockHistory size={40} className="text-secondary absolute top-[-20px] bg-backgroundColor"/>
+                <BsClockHistory
+                  size={40}
+                  className="text-secondary absolute top-[-20px] bg-backgroundColor"
+                />
                 <span className="uppercase text-white font-bold text-[20px] mandaFont mt-3">
                   Orari: 9:00 - 18:00
                 </span>
@@ -61,7 +62,10 @@ export default function Piscina() {
                 {/* <h2 className="uppercase text-white font-bold md:text-[60px] text-[40px] mandaFont">
                   STAGIONE
                 </h2> */}
-                <CiCircleCheck size={40} className="text-secondary absolute top-[-20px] bg-backgroundColor"/>
+                <CiCircleCheck
+                  size={40}
+                  className="text-secondary absolute top-[-20px] bg-backgroundColor"
+                />
                 <span className="uppercase text-white font-bold text-[20px] mandaFont mt-3">
                   spogliatoio
                 </span>
@@ -72,35 +76,15 @@ export default function Piscina() {
                   obbligo cuffia
                 </span>
               </div>
-              <div className="relative flex w-full xl:w-1/5 flex-col items-center px-3 py-10  border rounded-lg border-secondary">
-                {/* <h2 className="uppercase text-white font-bold md:text-[60px] text-[40px] mandaFont">
-                  COSTI
-                </h2> */}
-                <AiOutlineEuro size={40} className="text-secondary absolute top-[-20px] bg-backgroundColor"/>
-                <span className="uppercase text-white font-bold text-[20px] mandaFont mt-2">
-                  bambini fino a 5 anni: gratis
-                </span>
-                <span className="uppercase text-white font-bold text-[20px] mandaFont mt-2">
-                  ingresso: 5€
-                </span>
-                <span className="uppercase text-white font-bold text-[20px] mandaFont mt-2">
-                  ombrellone + 1 lettino: 10€
-                </span>
-                <span className="uppercase text-white font-bold text-[20px] mandaFont mt-2">
-                  lettino aggiuntivo: 3€
-                </span>
-                <span className="uppercase text-white font-bold text-[20px] mandaFont mt-2">
-                  lettino solarium: 8€
-                </span>
-                <span className="uppercase text-white font-bold text-[20px] mandaFont mt-2">
-                  cuffie: 2,50€
-                </span>
-              </div>
+
               <div className="relative w-full xl:w-1/5 flex flex-col items-center px-3 py-10  border rounded-lg border-secondary">
                 {/* <h2 className="uppercase text-white font-bold md:text-[60px] text-[40px] mandaFont">
                   Disponibilità
                 </h2> */}
-                <FaUmbrellaBeach size={40} className="text-secondary absolute top-[-20px] bg-backgroundColor"/>
+                <FaUmbrellaBeach
+                  size={40}
+                  className="text-secondary absolute top-[-20px] bg-backgroundColor"
+                />
                 <span className="uppercase text-white font-bold text-[20px] mandaFont mt-3">
                   ombrelloni: 20
                 </span>
@@ -112,6 +96,41 @@ export default function Piscina() {
                 </span>
               </div>
             </div>
+          </div>
+        </div>
+        <div className="relative flex w-3/4 text-center xl:w-1/2 mt-10 flex-col items-center px-3 py-10  border rounded-lg border-secondary">
+          {/* <h2 className="uppercase text-white font-bold md:text-[60px] text-[40px] mandaFont">
+                  COSTI
+                </h2> */}
+          <AiOutlineEuro
+            size={40}
+            className="text-secondary absolute top-[-20px] bg-backgroundColor"
+          />
+          <div className="flex flex-col">
+            <span className="uppercase text-white font-bold text-[25px] mandaFont mt-2">
+              ingresso: 3€
+            </span>
+            <span className="text-sm text-white mt-[-10px]">con servizio spogliatoio e doccia calda</span>
+          </div>
+          <span className="uppercase text-white font-bold text-[25px] mandaFont mt-2">
+            bambini fino a 5 anni: gratis
+          </span>
+          <span className="uppercase text-white font-bold text-[25px] mandaFont mt-2">
+            ingresso + ombrellone + 1 lettino: <br />
+            6€ mezza giornata <br />
+            10€ giornata intera
+          </span>
+          <span className="uppercase text-white font-bold text-[25px] mandaFont mt-2">
+            ingresso + ombrellone + 2 lettini: <br />
+            10€ mezza giornata <br />
+            18€ giornata intera <br />
+            lettino aggiuntivo 5€
+          </span>
+          <div className="flex flex-col">
+            <span className="uppercase text-white font-bold text-[25px] mandaFont mt-2">
+              ingresso + lettino solarium: 8€
+            </span>
+            <span className="text-sm text-white mt-[-10px]">ombrellone non compreso</span>
           </div>
         </div>
         <div className="flex flex-col lg:flex-row gap-4 items-center justify-center w-1/2 mt-20">
@@ -127,7 +146,9 @@ export default function Piscina() {
                 setnumOmbrelloni(parseInt(e.target.value));
               }}
             />
-            <span className="absolute px-1 font-bold top-[-10px] bg-backgroundColor text-sm text-secondary">Num. Ombrelloni</span>
+            <span className="absolute px-1 font-bold top-[-10px] bg-backgroundColor text-sm text-secondary">
+              Num. Ombrelloni
+            </span>
             <FaUmbrellaBeach className="text-secondary" />
           </label>
           <label className="input relative focus-within:shadow-2xl lg:w-1/4 w-full focus-within:shadow-secondary input-bordered bg-transparent border border-secondary flex items-center gap-2">
@@ -142,7 +163,9 @@ export default function Piscina() {
                 setnumLettini(parseInt(e.target.value));
               }}
             />
-            <span className="absolute px-1 font-bold top-[-10px] bg-backgroundColor text-sm text-secondary">Num. Lettini</span>
+            <span className="absolute px-1 font-bold top-[-10px] bg-backgroundColor text-sm text-secondary">
+              Num. Lettini
+            </span>
             <GiBed className="text-secondary" size={20} />
           </label>
           <label className="input relative focus-within:shadow-2xl lg:w-1/4 w-full focus-within:shadow-secondary input-bordered bg-transparent border border-secondary flex items-center gap-2">
@@ -158,40 +181,41 @@ export default function Piscina() {
               }}
             />
             {/* <GiBed className="text-secondary" size={20}/> */}
-            <span className="absolute px-1 font-bold top-[-10px] bg-backgroundColor text-sm text-secondary">Data</span>
+            <span className="absolute px-1 font-bold top-[-10px] bg-backgroundColor text-sm text-secondary">
+              Data
+            </span>
           </label>
         </div>
         <button
-            className="rounded-xl mt-10 w-1/2 disabled:opacity-40 flex items-center justify-center flex-row gap-4 px-2 md:w-1/4 py-2 border-[1px] border-secondary text-secondary text-xl hover:bg-secondary hover:text-backgroundColor hover:cursor-pointer"
-            disabled={numLettini===0 || numOmbrelloni===0 || !data}
-            onClick={() => {
-              if (data) {
-                let dataArray = data?.split("-");
-                let text = `Salve, è possibile prenotare *${numOmbrelloni}* ombrelloni e *${numLettini}* lettini per il giorno *${
-                  dataArray[2]}/${dataArray[1]}/${dataArray[0]}*?`;
-                // if (navigator.userAgent.includes("WhatsApp")) {
-                //   // WhatsApp is installed
-                //   window.open(`whatsapp://send?phone=+393283108595&text=${text}`);
-                //   setData(undefined)
-                //   setnumLettini(undefined)
-                //   setnumOmbrelloni(undefined)
-                // } else {
-                //   // WhatsApp is not installed, open WhatsApp Web
-                //   //window.open('https://web.whatsapp.com/send?phone=3283108595', '_blank');
-                //   window.open(`https://web.whatsapp.com/send?phone=+393283108595&text=${text}`);
-                //   setData(undefined)
-                //   setnumLettini(undefined)
-                //   setnumOmbrelloni(undefined)
-                // }
-                window.open(`whatsapp://send?phone=+393293306094&text=${text}`);
-                setData(undefined)
-                setnumLettini(0)
-                setnumOmbrelloni(0)
-              }
-            }}
-          >
-            <span className="text-sm">Prenota</span>
-          </button>
+          className="rounded-xl mt-10 w-1/2 disabled:opacity-40 flex items-center justify-center flex-row gap-4 px-2 md:w-1/4 py-2 border-[1px] border-secondary text-secondary text-xl hover:bg-secondary hover:text-backgroundColor hover:cursor-pointer"
+          disabled={numLettini === 0 || numOmbrelloni === 0 || !data}
+          onClick={() => {
+            if (data) {
+              let dataArray = data?.split("-");
+              let text = `Salve, è possibile prenotare *${numOmbrelloni}* ombrelloni e *${numLettini}* lettini per il giorno *${dataArray[2]}/${dataArray[1]}/${dataArray[0]}*?`;
+              // if (navigator.userAgent.includes("WhatsApp")) {
+              //   // WhatsApp is installed
+              //   window.open(`whatsapp://send?phone=+393283108595&text=${text}`);
+              //   setData(undefined)
+              //   setnumLettini(undefined)
+              //   setnumOmbrelloni(undefined)
+              // } else {
+              //   // WhatsApp is not installed, open WhatsApp Web
+              //   //window.open('https://web.whatsapp.com/send?phone=3283108595', '_blank');
+              //   window.open(`https://web.whatsapp.com/send?phone=+393283108595&text=${text}`);
+              //   setData(undefined)
+              //   setnumLettini(undefined)
+              //   setnumOmbrelloni(undefined)
+              // }
+              window.open(`whatsapp://send?phone=+393293306094&text=${text}`);
+              setData(undefined);
+              setnumLettini(0);
+              setnumOmbrelloni(0);
+            }
+          }}
+        >
+          <span className="text-sm">Prenota</span>
+        </button>
       </div>
     </div>
   );
