@@ -21,6 +21,7 @@ const MyCarousel: React.FC<CarouselProps> = ({ images, section }) => {
 
   return (
     <Carousel
+      className="hidden xl:block"
       showArrows
       showIndicators={false}
       showStatus={false}
