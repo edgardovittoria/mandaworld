@@ -4,7 +4,7 @@ import piscina from "../../../../public/piscina.jpg";
 import { FaUmbrellaBeach } from "react-icons/fa";
 import { GiBed } from "react-icons/gi";
 import { useEffect, useState } from "react";
-import Carousel from "../(ui)/Carousel";
+import Carousel from "../(ui)/MyCarousel";
 import { ImgPiscina } from "@/app/model/model";
 import { fetchImagesPiscina } from "@/data/immaginiPiscina";
 import CarouselMobile from "../(ui)/CarouselMobile";

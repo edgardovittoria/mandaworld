@@ -1,11 +1,12 @@
 'use client'
 import Image from "next/image";
-import Carousel from "../(ui)/Carousel";
+import Carousel from "../(ui)/MyCarousel";
 import wawesPad from "../../../../public/waves-pad.png"
 import CarouselMobile from "../(ui)/CarouselMobile";
 import { useEffect, useState } from "react";
 import { ImgEvento } from "@/app/model/model";
 import { fetchImagesEventi } from "@/data/immaginiEventi";
+import MyCarousel from "../(ui)/MyCarousel";
 export default function Welcome() {
 
   const [images, setImages] = useState<ImgEvento[]>([])
@@ -28,7 +29,7 @@ export default function Welcome() {
             </h1>
             <Image src="/line-white.png" alt="alt" width={120} height={120} />
           </div>
-          <Carousel images={images} section="eventi"/>
+          <MyCarousel images={images} section="eventi"/>
           <CarouselMobile images={images} section="eventi"/>
         </div>
       </div>
