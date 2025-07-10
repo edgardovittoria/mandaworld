@@ -18,6 +18,37 @@
   
   }
 
+.btn-neon {
+  @apply relative inline-flex items-center gap-2 px-4 py-2 text-white font-semibold rounded border transition duration-300;
+}
+
+.btn-neon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(90deg, #22d3ee, #ec4899, #9333ea);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+  z-index: 0;
+  transition: all 0.4s ease;
+}
+
+.btn-neon:hover::before {
+  filter: blur(2px);
+  opacity: 0.8;
+}
+
+.btn-neon:hover {
+  background-color: #ec4899;
+  color: black;
+}
+
 html {
     scroll-behavior: smooth;
 }
